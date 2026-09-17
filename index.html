@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>TechFix Pro | Réparation & Maintenance Informatique</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            900: '#0b0f19',
+                            800: '#111827',
+                            700: '#1f2937',
+                            600: '#374151'
+                        },
+                        neon: {
+                            cyan: '#06b6d4',
+                            green: '#10b981',
+                            amber: '#f59e0b'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Style personnalisé minimaliste pour le glassmorphism mat */
+        .glass-card {
+            background: rgba(31, 41, 55, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .glass-nav {
+            background: rgba(11, 15, 25, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        /* Suppression du comportement de zoom sur double-tap iOS */
+        button, input, select, textarea {
+            touch-action: manipulation;
+        }
+    </style>
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#4b6cb7">
+<link rel="apple-touch-icon" href="icon.png"></head>
+<body class="bg-dark-900 text-gray-100 font-sans antialiased min-h-screen pb-24">
+
+    <!-- En-tête / Header -->
+    <header class="sticky top-0 z-50 glass-nav px-4 py-3 flex items-center justify-between border-b border-gray-800">
+        <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-xl bg-dark-700 flex items-center justify-center border border-neon-cyan/30 text-neon-cyan">
+                <i class="fa-solid fa-microchip text-lg"></i>
+            </div>
+            <div>
+                <h1 class="font-bold text-base tracking-wide text-white">TECHFIX <span class="text-neon-cyan">PRO</span></h1>
+                <p class="text-xs text-gray-400">Atelier & Maintenance Hardware</p>
+            </div>
+        </div>
+        <div class="flex items-center space-x-2">
+            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-500/15 text-neon-green border border-emerald-500/20">
+                <span class="w-1.5 h-1.5 mr-1.5 bg-neon-green rounded-full animate-pulse"></span> Ouvert
+            </span>
+        </div>
+    </header>
+
+    <!-- Contenu Principal -->
+    <main class="max-w-md mx-auto px-4 pt-4 space-y-6">
+
+        <!-- Bannière d'accroche -->
+        <section class="glass-card rounded-2xl p-5 relative overflow-hidden">
+            <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-neon-cyan/10 rounded-full blur-2xl pointer-events-none"></div>
+            <h2 class="text-xl font-bold text-white mb-2">Redonnez vie à votre matériel</h2>
+            <p class="text-xs text-gray-300 leading-relaxed mb-4">
+                Diagnostic rapide, réparation de cartes mères, montage PC sur mesure, remplacement d'écrans et nettoyage professionnel.
+            </p>
+            <div class="grid grid-cols-2 gap-2">
+                <a href="#contact" class="flex items-center justify-center space-x-2 bg-neon-cyan text-dark-900 font-semibold py-2.5 px-4 rounded-xl text-xs transition active:scale-95">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Devis Express</span>
+                </a>
+                <a href="#services" class="flex items-center justify-center space-x-2 bg-dark-700 text-gray-200 font-medium py-2.5 px-4 rounded-xl text-xs border border-gray-600/50 transition active:scale-95">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <span>Voir Tarifs</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Section Services & Prestations -->
+        <section id="services" class="space-y-3">
+            <div class="flex items-center justify-between">
+                <h3 class="text-sm font-bold uppercase tracking-wider text-gray-400">Prestations Hardware</h3>
+                <span class="text-xs text-neon-cyan font-medium">Garantie pièces & main d'œuvre</span>
+            </div>
+
+            <div class="grid grid-cols-1 gap-2.5">
+                <!-- Carte Service 1 -->
+                <div class="glass-card rounded-xl p-4 flex items-start space-x-3.5 transition hover:border-gray-500/30">
+                    <div class="w-10 h-10 rounded-lg bg-dark-700/80 flex items-center justify-center text-neon-cyan shrink-0 mt-0.5 border border-gray-700">
+                        <i class="fa-solid fa-desktop"></i>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex items-center justify-between mb-1">
+                            <h4 class="font-semibold text-sm text-white truncate">Montage & Optimisation PC</h4>
+                            <span class="text-xs font-bold text-neon-cyan">Dès 30 €</span>
+                        </div>
+                        <p class="text-xs text-gray-400 leading-relaxed">Assemblage de composants, cable management soigné, installation système et tests de stress thermiques.</p>
+                    </div>
+                </div>
+
+                <!-- Carte Service 2 -->
+                <div class="glass-card rounded-xl p-4 flex items-start space-x-3.5 transition hover:border-gray-500/30">
+                    <div class="w-10 h-10 rounded-lg bg-dark-700/80 flex items-center justify-center text-neon-green shrink-0 mt-0.5 border border-gray-700">
+                        <i class="fa-solid fa-laptop-medical"></i>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex items-center justify-between mb-1">
+                            <h4 class="font-semibold text-sm text-white truncate">Réparation Laptop & Mac</h4>
+                            <span class="text-xs font-bold text-neon-green">Sur devis</span>
+                        </div>
+                        <p class="text-xs text-gray-400 leading-relaxed">Remplacement de dalles, connecteurs de charge, claviers fatigués et micro-soudure de circuits.</p>
+                    </div>
+                </div>
+
+                <!-- Carte Service 3 -->
+                <div class="glass-card rounded-xl p-4 flex items-start space-x-3.5 transition hover:border-gray-500/30">
+                    <div class="w-10 h-10 rounded-lg bg-dark-700/80 flex items-center justify-center text-neon-amber shrink-0 mt-0.5 border border-gray-700">
+                        <i class="fa-solid fa-wind"></i>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex items-center justify-between mb-1">
+                            <h4 class="font-semibold text-sm text-white truncate">Dépoussiérage & Pâte Thermique</h4>
+                            <span class="text-xs font-bold text-neon-amber">25 €</span>
+                        </div>
+                        <p class="text-xs text-gray-400 leading-relaxed">Nettoyage complet des ventilateurs/radiateurs et application de pâte thermique haute performance (Thermal Grizzly).</p>
+                    </div>
+                </div>
+
+                <!-- Carte Service 4 -->
+                <div class="glass-card rounded-xl p-4 flex items-start space-x-3.5 transition hover:border-gray-500/30">
+                    <div class="w-10 h-10 rounded-lg bg-dark-700/80 flex items-center justify-center text-purple-400 shrink-0 mt-0.5 border border-gray-700">
+                        <i class="fa-solid fa-hard-drive"></i>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex items-center justify-between mb-1">
+                            <h4 class="font-semibold text-sm text-white truncate">Récupération de Données</h4>
+                            <span class="text-xs font-bold text-purple-400">Sur diagnostic</span>
+                        </div>
+                        <p class="text-xs text-gray-400 leading-relaxed">Sauvegarde et extraction de fichiers sur disques durs endommagés, SSD défectueux ou clés USB corrompues.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Simulateur / Demande de Devis Rapide -->
+        <section id="contact" class="glass-card rounded-2xl p-5 space-y-4">
+            <div>
+                <h3 class="text-sm font-bold text-white mb-1">Demande de Diagnostic / Devis</h3>
+                <p class="text-xs text-gray-400">Remplissez ce mini-formulaire pour m'envoyer directement votre demande via WhatsApp.</p>
+            </div>
+
+            <form id="quoteForm" onsubmit="sendWhatsApp(event)" class="space-y-3">
+                <div>
+                    <label class="block text-xs font-medium text-gray-300 mb-1">Votre Nom</label>
+                    <input type="text" id="clientName" required placeholder="Ex: Jean Dupont" 
+                        class="w-full bg-dark-800 border border-gray-700 rounded-xl px-3 py-2.5 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-neon-cyan">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-medium text-gray-300 mb-1">Type de Matériel</label>
+                    <select id="deviceType" class="w-full bg-dark-800 border border-gray-700 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-neon-cyan">
+                        <option value="PC fixe / Gamer">PC fixe / Gamer</option>
+                        <option value="Ordinateur portable">Ordinateur portable (Laptop)</option>
+                        <option value="MacBook / iMac">MacBook / iMac</option>
+                        <option value="Console de jeux">Console de jeux (PS5, Xbox, etc.)</option>
+                        <option value="Autre matériel">Autre matériel</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-medium text-gray-300 mb-1">Description du Problème</label>
+                    <textarea id="issueDesc" rows="3" required placeholder="Ex: Ne s'allume plus, chauffe beaucoup, écran noir..." 
+                        class="w-full bg-dark-800 border border-gray-700 rounded-xl px-3 py-2.5 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-neon-cyan resize-none"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-3 rounded-xl text-xs flex items-center justify-center space-x-2 transition active:scale-95 shadow-lg shadow-emerald-900/30">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>Envoyer la demande sur WhatsApp</span>
+                </button>
+            </form>
+        </section>
+
+        <!-- Infos Atelier & Horaires -->
+        <section class="glass-card rounded-2xl p-5 space-y-3">
+            <h3 class="text-sm font-bold text-white mb-2">Informations Pratiques</h3>
+            <div class="space-y-2 text-xs text-gray-300">
+                <div class="flex items-center space-x-3">
+                    <div class="w-7 h-7 rounded-lg bg-dark-700 flex items-center justify-center text-neon-cyan shrink-0">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <span>Atelier situé à Paris (Intervention & Dépôt sur RDV)</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <div class="w-7 h-7 rounded-lg bg-dark-700 flex items-center justify-center text-neon-green shrink-0">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <span>Lundi au Samedi : 09h00 - 19h00</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <div class="w-7 h-7 rounded-lg bg-dark-700 flex items-center justify-center text-neon-amber shrink-0">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <span>Diagnostic clair & Devis gratuit avant intervention</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Barre de Navigation Flottante Basse (Mobile First) -->
+    <nav class="fixed bottom-0 left-0 right-0 glass-nav px-6 py-3 z-50 flex items-center justify-around">
+        <a href="#" class="flex flex-col items-center text-neon-cyan space-y-1">
+            <i class="fa-solid fa-house text-base"></i>
+            <span class="text-[10px] font-medium">Accueil</span>
+        </a>
+        <a href="#services" class="flex flex-col items-center text-gray-400 hover:text-white space-y-1">
+            <i class="fa-solid fa-screwdriver-wrench text-base"></i>
+            <span class="text-[10px] font-medium">Tarifs</span>
+        </a>
+        <a href="#contact" class="flex flex-col items-center text-gray-400 hover:text-white space-y-1">
+            <i class="fa-solid fa-headset text-base"></i>
+            <span class="text-[10px] font-medium">Contact</span>
+        </a>
+        <a href="tel:+33600000000" class="flex flex-col items-center text-emerald-400 space-y-1">
+            <i class="fa-solid fa-phone-volume text-base"></i>
+            <span class="text-[10px] font-medium">Appeler</span>
+        </a>
+    </nav>
+
+    <!-- Script de redirection WhatsApp -->
+    <script>
+        function sendWhatsApp(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('clientName').value.trim();
+            const device = document.getElementById('deviceType').value;
+            const issue = document.getElementById('issueDesc').value.trim();
+            
+            // Remplacez ce numéro par votre propre numéro WhatsApp au format international (ex: 33612345678)
+            const phoneNumber = "33600000000"; 
+            
+            const message = `Bonjour, je souhaite un devis hardware.%0A%0A*Nom:* ${encodeURIComponent(name)}%0A*Matériel:* ${encodeURIComponent(device)}%0A*Problème:* ${encodeURIComponent(issue)}`;
+            
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+            window.open(whatsappURL, '_blank');
+        }
+    </script>
+
+<script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js'));}</script>
+</body>
+</html>
